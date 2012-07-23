@@ -1,6 +1,5 @@
 import os
 import serial
-import virtkey
 import subprocess
 
 ser = serial.Serial('/dev/ttyUSB0')
@@ -96,8 +95,6 @@ def press_os(key, byte):
   subprocess.Popen(["xdotool", 'keyup', key])
   old[key] =0
   '''print 'up ' + key'''
-
-keyEmu = virtkey.virtkey()
 
 temp=[0]*12
 
